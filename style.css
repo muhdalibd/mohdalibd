@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: linear-gradient(to right, #fed7ad, #fed7ad);
+}
+
 html {
     overflow-x: hidden;
 }
@@ -15,7 +19,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+    background: var(--bg-color);
 }
 
 nav {
@@ -93,7 +97,7 @@ nav {
 }
 
 .nav-container .contact-btn a{
-    color: white;
+    color: blue;
     transition: 0.3s linear;
 }
 
@@ -101,10 +105,6 @@ nav {
     background-color: rgb(109,67, 0);
     color: white;
 }
-
-/* .nav-container .links a:hover{
-    color: rgb(109, 67, 0);
-} */
 
 .dropdown{
     z-index: 100;
@@ -174,43 +174,60 @@ section{
     font-size: clamp(1rem, 1rem + 5vw, 1.7rem);
 }
 
-.content .typewriter span{
-    color: rgb(109,67, 0);
-    font-size: 2rem;
-    text-shadow: 0 0 5px rgb(109,67, 0);
+.content .typewriter span {
     position: relative;
-    transition: 0.3s linear;
 }
 
-.typewriter span::before{
-    content: "Developer";
-    animation: words 15s infinite;
+.content .typewriter span::before {
+    content: "YouTuber";
+    color: #FF7F50;
+    animation: words 20s infinite;
 }
 
-.typewriter span::after{
-    content: "";
+.content .typewriter span::after {
+    content:"";
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid black;
-    animation: cursor 0.6s linear infinite;
+    background-color: #fed7ad;
+    border-left: 2px solid --bg-previous;
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
 }
 
-@keyframes cursor  {
-    to{
-        border-left: 3px solid #b74b4b;
+@keyframes cursor {
+    to {
+        border-left: 2px solid #FF7F50;
     }
 }
+
 
 @keyframes words {
-    0%, 33%{
-        content: "Developer";
+    0%, 25% {
+         content: "Web Developer";
     }
-    34%, 66%{
-        content: "Designer";
+
+    26%, 50% {
+         content: "Web Designer";
     }
-    67%, 100%{
-        content: "YouTuber";
+
+    51%, 75% {
+         content: "Content Creator";
+    }
+
+    76%, 100% {
+         content: "Tech Passionate";
+    }
+
+}
+
+@keyframes typing {
+    12.5%,18.75%, 37.5%,43.25%, 62.5%,68.75%, 87.5%,93.75% {
+         width: 0;
+    }
+
+    6.25%,25%,31.25%, 50%,56.25%, 75%,81.25% {
+         width: calc(100% + 8px);
     }
 }
 
@@ -278,8 +295,6 @@ section{
 
 #whatsapp:hover {
     border: black;
-    /* background: linear-gradient(#25d366,#25d366) 14% 84%/16% 16% no-repeat,
-    radial-gradient(#25d366 60%,transparent 0); */
     background-color: #25d366;
 }
 
@@ -362,5 +377,3 @@ section{
         margin-bottom: 0px;
     }
 }
-
-
