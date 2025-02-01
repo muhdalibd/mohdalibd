@@ -208,7 +208,7 @@ section{
     }
 
     26%, 50% {
-         content: "Web Designer";
+         content: "Web Designer &";
     }
 
     51%, 75% {
@@ -252,6 +252,13 @@ section{
 }
 
 .social-links i:hover{
+    scale: 1.3;
+    color: white;
+    background-color: rgb(109,67, 0);
+    filter: drop-shadow(0 0 10px rgb(109, 67, 0));
+}
+
+.social-links i:visited{
     scale: 1.3;
     color: white;
     background-color: rgb(109,67, 0);
@@ -363,9 +370,10 @@ section{
     }
 
     .social-links i {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1.375rem;
+        margin: 5px 5px;
     }
 
     .cancel{
