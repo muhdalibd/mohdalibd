@@ -161,7 +161,7 @@ section{
 }
 
 .content h1{
-    font-size: clamp(1rem, 2rem + 5vw, 2.7rem);
+    font-size: clamp(1rem, 2rem + 5vw, 2.2rem);
 }
 
 .content h1 span{
@@ -171,7 +171,7 @@ section{
 
 .content .typewriter{
     font-weight: 600;
-    font-size: clamp(1rem, 1rem + 5vw, 1.7rem);
+    font-size: clamp(1rem, 1rem + 5vw, 1.5rem);
 }
 
 .content .typewriter span {
@@ -370,10 +370,10 @@ section{
     }
 
     .social-links i {
-        width: 2.3rem;
-        height: 2.3rem;
-        font-size: 1.375rem;
-        margin: 5px 5px;
+        width: 2.375rem;
+        height: 2.375rem;
+        font-size: 1.38rem;
+        margin: 5px 4px;
     }
 
     .cancel{
