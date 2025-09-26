@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Cairo+Play:wght@200..1000&family=Charm:wght@400;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Charm','Poppins', sans-serif;
     box-sizing: border-box;
 }
 
 :root {
     --bg-color: linear-gradient(to right, #fed7ad, #fed7ad);
+    --bg-color: #E8E8E8;
+    --bg-color: #E8DCDC;
 }
 
 html {
@@ -16,14 +19,14 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     background: var(--bg-color);
 }
 
 nav {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     position: sticky;
 }
@@ -38,23 +41,22 @@ nav {
 }
 
 .logo {
-    color: black;
     font-size: 2rem;
-    font-weight: bolder;
 }
 
 .logo span {
-    color: rgb(109,67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    font-family: 'Pacifico';
+    color: #22303F;
+    text-shadow: 0 0 1px #22303F;
 }
 
 .hamburg, .cancel {
     cursor: pointer;
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 20px;
+    top: 20px;
     color: black;
-    font-size: 2rem;
+    font-size: 1.2rem;
     display: none;
 }
 
@@ -67,9 +69,9 @@ nav {
 .nav-container .links a {
     position: relative;
     font-size: 1.2rem;
-    color: black;
+    color: #22303F;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
     transform: 0.3s linear;
 }
 
@@ -80,7 +82,7 @@ nav {
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: rgb(109,67, 0);
+    background-color: #22303F;
     transition: 0.2s linear;
 }
 
@@ -92,18 +94,18 @@ nav {
     background-color: transparent;
     padding: 5px 20px;
     border-radius: 20px;
-    border: 2px solid rgb(109,67, 0);
+    border: 2px solid #22303F;
     transition: 0.2s linear;
 }
 
 .nav-container .contact-btn a{
-    color: blue;
+    color: #22303f;
     transition: 0.3s linear;
 }
 
 .nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
-    background-color: rgb(109,67, 0);
-    color: white;
+    background-color: #22303F;
+    color: #fff;
 }
 
 .dropdown{
@@ -129,10 +131,10 @@ nav {
 }
 
 .dropdown .links a:hover{
-    background-color: rgb(109,67, 0);
+    background-color: #22303F;
 }
 
-section{
+section {
     width: 100%;
     height: 90vh;
 }
@@ -165,13 +167,13 @@ section{
 }
 
 .content h1 span{
-    color: rgb(109, 67, 0);
-    text-shadow: 0 0 10px rgb(109,67, 0);
+    text-shadow: 0 0 1px #22303F;
+    color: #22303F;
 }
 
 .content .typewriter{
     font-weight: 600;
-    font-size: clamp(1rem, 1rem + 5vw, 1.5rem);
+    font-size: clamp(1rem, 1rem + 5vw, 1.7rem);
 }
 
 .content .typewriter span {
@@ -179,7 +181,7 @@ section{
 }
 
 .content .typewriter span::before {
-    content: "YouTuber";
+    content: '';
     color: #FF7F50;
     animation: words 20s infinite;
 }
@@ -189,7 +191,7 @@ section{
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    background-color: #fed7ad;
+    background-color: var(--bg-color);
     border-left: 2px solid --bg-previous;
     right: -8px;
     animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
@@ -203,37 +205,42 @@ section{
 
 
 @keyframes words {
-    0%, 25% {
-         content: "Web Developer";
+    0%,
+    50% {
+        content: "Programmer";
     }
 
-    26%, 50% {
-         content: "Web Designer &";
-    }
-
-    51%, 75% {
-         content: "Content Creator";
-    }
-
-    76%, 100% {
-         content: "Tech Passionate";
+    51%,
+    100% {
+        content: "Developer";
     }
 
 }
 
 @keyframes typing {
-    12.5%,18.75%, 37.5%,43.25%, 62.5%,68.75%, 87.5%,93.75% {
-         width: 0;
+
+    25%,    
+    37.5%,    
+    75%,   
+    87.5% {
+        width: 0;
     }
 
-    6.25%,25%,31.25%, 50%,56.25%, 75%,81.25% {
-         width: calc(100% + 8px);
+    12.5%,   
+    50%,    
+    62.5% {
+        width: calc(100% + 8px);
     }
 }
 
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
-    margin: 8px 0;
+    text-size-adjust: initial;
+    word-break: break-word;
+    font-family: 'Poppins';
+    margin: 10px 0;
+    color: #22303F;
+    text-align: initial;
 }
 
 .social-links i{
@@ -243,46 +250,56 @@ section{
     width: 3rem;
     height: 3rem;
     background-color:transparent;
-    border: 0.2rem solid rgb(109,67, 0);
+    border: 0.2rem solid #22303f;
     border-radius: 50%;
-    color:rgb(109,67, 0);
+    color: #22303f;
     margin: 5px 10px;
     font-size: 1.5rem;
     transition: 0.2s linear;
 }
 
 .social-links i:hover{
-    scale: 1.3;
+    scale: 1.15;
     color: white;
-    background-color: rgb(109,67, 0);
-    filter: drop-shadow(0 0 10px rgb(109, 67, 0));
+    background-color: #22303f;
+    filter: drop-shadow(0 0 10px #22303F);
 }
 
-.social-links i:visited{
-    scale: 1.3;
+.social-links i:visited {
+    scale: 1.18;
     color: white;
-    background-color: rgb(109,67, 0);
-    filter: drop-shadow(0 0 10px rgb(109, 67, 0));
+    background-color: #22303f;
+    filter: drop-shadow(0 0 10px #22303F);
 }
 
 #github:hover {
     border: black;
     background-color: #433d3d;
+    transition: 1s;
+}
+
+#github::after {
+    border: black;
+    background-color: #433d3d;
+    transition: 1s;
 }
 
 #linkedin:hover {
     border: #1717d0;
     background-color: #0A66C2;
+    transition: 1s;
 }
 
 #twitter:hover {
     border: black;
     background-color: #2b2b2b;
+    transition: 1s;
 }
 
 #facebook:hover {
     border: #1717d0;
     background-color: #1877F2;
+    transition: 1s;
 }
 
 #instagram:hover {
@@ -293,49 +310,54 @@ section{
     #d42e81 50%,
     #a237b6 75%,
     #3e57bc 100%);
+    transition: 1s;
 }
 
 #youtube:hover {
     border: black;
     background-color: #FF0000;
+    transition: 1s;
 }
 
 #whatsapp:hover {
     border: black;
     background-color: #25d366;
+    transition: 1s;
 }
 
 #threads:hover {
     border: black;
     background-color: #262626;
+    transition: 1s;
 }
 
 #telegram:hover {
     border: black;
     background-color: #0088CC;
+    transition: 1s;
 }
 
 .content button{
     width: 40%;
     height: 6vh;
     margin: 30px;
-    background-color: rgb(109,67, 0);
+    background-color: #22303F;
     color: white;
     border: none;
     outline: none;
     font-size: 100%;
     font-weight: 700;
     border-radius: 5px;
-    transition: 0.2s linear;
+    transition: 0.5s linear;
 }
 
 .content button:hover{
  scale: 1.1;
- color: rgb(109,67, 0);
- border: 2px solid rgb(109,67, 0);
+ color: #22303F;
+ border: 2px solid #22303F;
  background-color: transparent;
  font-weight: 800;
- box-shadow: 0 0 40px rgb(109,67, 0);
+ box-shadow: 0 0 10px #22303F;
 }
 
 
@@ -366,14 +388,14 @@ section{
     }
 
     .main-container .content {
-        width: 85%;
+        width: 90%;
     }
 
     .social-links i {
-        width: 2.375rem;
-        height: 2.375rem;
-        font-size: 1.38rem;
-        margin: 5px 4px;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        margin: 5px 5px;
     }
 
     .cancel{
@@ -381,7 +403,64 @@ section{
     }
 
     .main-container .image{
-        width: 65%;
+        width: 70%;
         margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+
+    .hamburg {
+        display: block;
+    }
+
+    .dropdown {
+        display: flex;
+    }
+
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .typewriter {
+        font-size: 1.2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .typewriter {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        font-size: 1.2rem;
+    }
+
+    .btn button {
+        font-size: 0.9rem;
     }
 }
